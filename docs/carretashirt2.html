@@ -7,35 +7,29 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #fff; /* color de fondo del popup */
-    }
-    model-viewer {
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-    }
-  #view3d {
-    box-sizing: border-box;
-    padding: 20px; /* cambia a 10px/30px si quieres menos/más margen */
-    width: 40%;
-    height: 500px;
-    margin: auto;
-    position: relative;
-    background: #f5f5f5;
-    overflow: hidden;
-  }
-  .view3d-poster{
-    filter: none;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 
+#view3d {
+  width: 90vw; 
+  height: 90vh;  
+  margin: auto;
+  position: relative;
+  background: #f5f5f5;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+}
 
-
-
+/* Canvas de View3D ocupa todo el contenedor */
+#view3d .view3d-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
 
   </style>
 </head>
@@ -210,3 +204,4 @@ view3D.on("ready", () => {
 </script>
 </body>
 </html>
+
